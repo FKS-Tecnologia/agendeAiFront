@@ -1,0 +1,5 @@
+body, html {
+	@media (max-width: $screen-sm) {
+		overflow: auto!important;
+	}
+}

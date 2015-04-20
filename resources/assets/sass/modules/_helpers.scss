@@ -1,0 +1,66 @@
+.mt-huge {
+	margin-top: 100px;
+
+	@media (max-width: $screen-sm) {
+		margin-top: 40px;
+	}
+}
+
+.mb { margin-bottom: 25px; }
+.mb--first { margin-bottom: 35px; }
+.mb--second { margin-bottom: 20px; }
+
+.row-same-height {
+	/*display: table;*/
+	margin: 0;
+
+	@media (max-width: $screen-sm) {
+		display: block;
+		height: auto;
+	}
+}
+
+.absolute-vertical-align {
+	top: 50%;
+	transform: translateY(-100%);
+	position: absolute;
+	right: 15px;
+	left: 15px;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.display-table {
+	display: table;
+}
+
+.table-cell {
+	display: table-cell;
+	float: none!important;
+}
+
+.col-same-height {
+	/*display: table-cell;
+	float: none!important;*/
+	height: 100%;
+
+	@media (max-width: $screen-sm) {
+		display: block;
+	}
+}
+
+.height-auto {
+	@media (max-width: $screen-sm) {
+		height: auto!important;
+	}
+}
+
+.vertical-middle {
+	vertical-align: middle;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}

@@ -1,5 +1,15 @@
-body, html {
-	@media (max-width: $screen-sm) {
-		overflow: auto!important;
-	}
+/* === Base === */
+.site-wrapper {
+  max-width: 930px;
+  display: block;
+  margin: auto;
 }
+
+/* === Struture === */
+.nav-welcome {
+  width:380px;
+  display: block;
+  margin:auto;
+}
+
+/* === Modules === */

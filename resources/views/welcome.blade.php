@@ -1,47 +1,48 @@
 <html>
 	<head>
 		<title>Laravel</title>
-		
-		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				height: 100%;
-				color: #B0BEC5;
-				display: table;
-				font-weight: 100;
-				font-family: 'Lato';
-			}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Laravel</title>
 
-			.container {
-				text-align: center;
-				display: table-cell;
-				vertical-align: middle;
-			}
+        <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
-			.content {
-				text-align: center;
-				display: inline-block;
-			}
+        <!-- Fonts -->
+        <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
-			.title {
-				font-size: 96px;
-				margin-bottom: 40px;
-			}
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-			.quote {
-				font-size: 24px;
-			}
-		</style>
 	</head>
-	<body>
+	<body class="bg-orange">
 		<div class="container">
-			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
+			<div class="content text-center row">
+                <div class="col-xs-12" style="margin-top:50px;">
+                    <img src="{{ asset('images/logo.png') }}" />
+                </div>
+
+                <div class="col-xs-12"  style="margin-top:10px;">
+                    <ul class="nav nav-pills nav-justified nav-welcome">
+                        <li>
+                            <a href="{{ url('/associado') }}">
+                                Acesso ao lojista
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/associado') }}">
+                                Novo cadastro
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
 			</div>
 		</div>
 	</body>

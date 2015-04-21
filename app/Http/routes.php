@@ -13,6 +13,15 @@
 
 Route::get('/', 'WelcomeController@index');
 
+Route::group(['prefix' => 'associado'], function()
+{
+    Route::get('/', 'Associate\AssociateController@index');
+    Route::get('info', 'Associate\AssociateController@index');
+
+    Route::resource('funcionarios', 'Associate\EmploymentController');
+});
+
+
 Route::get('home', 'HomeController@index');
 
 Route::controllers([

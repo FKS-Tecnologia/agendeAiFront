@@ -14,8 +14,12 @@
     </div>
 
 	<!-- Scripts -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    {!! Html::script('https://code.jquery.com/jquery-2.1.4.min.js') !!}
+    {!! Html::script('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js') !!}
+    {!! Html::script(asset('/js/boostrap_datapicker.js')) !!}
+    {!! Html::script(asset('/js/boostrap_timepicker.js')) !!}
+    {!! Html::script(asset('/js/boostrap_switch.js')) !!}
+    {!! Html::script(asset('/js/main.js')) !!}
 
     @include('modules/footer')
     @yield('footer')

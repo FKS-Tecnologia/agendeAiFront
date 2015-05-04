@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\Employment;
+<?php namespace App\Http\Controllers\Associate;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -14,7 +14,14 @@ class EmploymentController extends Controller {
 	 */
 	public function index()
 	{
-		//
+
+        $services=['Banho', 'Tosa - Pequeno', 'Tosa - Grande'];
+
+
+		return view('associate/employment_index')
+            ->with('title', 'Funcionários')
+            ->with('breads', ['Funcionários' => 'associado/funcionarios'])
+            ->with('services', $services);
 	}
 
 	/**

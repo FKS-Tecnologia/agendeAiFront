@@ -1,7 +1,11 @@
-.nav a {
+.nav-top .nav a, .nav-welcome a {
   color:#fff;
 }
 
-.nav a:hover {
+.nav-top .nav a:hover, .nav-welcome a:hover {
   color:$brand-primary;
+}
+
+.modal-dialog {
+  z-index:9999;
 }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default nav-top">
     <div class="container-fluid bg-orange pd-base">
         <div class="site-wrapper">
             <div class="pull-left">
@@ -13,8 +13,8 @@
                     <li><a href="{{ url('/associado/funcionarios') }}">Funcionários</a></li>
                     <li><a href="{{ url('/associado/servicos') }}">Serviços</a></li>
                     <li><a href="{{ url('/associado/calendario') }}">Calendário</a></li>
-                    <li><a href="{{ url('/associado/usuario') }}">Usuário</a></li>
-                    <li><a href="{{ url('/auth/logout') }}">Sair</a></li>
+                    <li><a href="{{ url('/associado/usuarios') }}">Usuário</a></li>
+                    <li><a href="{{ url('/auth/login') }}">Sair</a></li>
                     <!--
                     @if (Auth::guest())
                         <li><a href="{{ url('/auth/login') }}">Login</a></li>

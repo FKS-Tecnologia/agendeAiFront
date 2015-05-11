@@ -11,7 +11,7 @@ class Breadcrump {
             $links=[];
         };
 
-        return view('modules/breadcrump')
+        return view('associate/modules/breadcrump')
                 ->with('links', $links);
     }
 

@@ -9,20 +9,19 @@
             <div class="modal-body row">
                 <div class="col-xs-12">
                     <div class="form-group">
-                        {!! Form::label('name', 'Nome:') !!}
-                        {!! Form::select('name', $services, null, ['class'=>'form-control']) !!}
-                    </div>
-                    <hr/>
-                    <div class="form-group">
-                        {!! Form::label('description', 'Descrição:') !!}
-                        {!! Form::textarea('description', null, ['class'=>'form-control', 'rows' => '5']) !!}
+                        {!! HForm::select('name', 'Nome', $services) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::label('time', 'Tempo:') !!}
-                        <div class="input-group bootstrap-timepicker">
-                            {!! Form::text('time', null, ['class'=>'form-control time', 'data-show-meridian'=>'false', 'data-default-time'=>'0:15']) !!}
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-                        </div>
+                        {!! HForm::select('pet_size', 'Porte do pet', $sizes) !!}
+                    </div>
+                    <div class="form-group">
+                        {!! HForm::price('price', 'Preço') !!}
+                    </div>
+                    <div class="form-group">
+                        {!! HForm::textarea('description', 'Descrição') !!}
+                    </div>
+                    <div class="form-group">
+                        {!! HForm::time('time', 'Tempo', null, 'false') !!}
                     </div>
                 </div>
             </div>

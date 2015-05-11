@@ -15,15 +15,8 @@
     </div>
 
 
-
-
         <div class="col-xs-4 col-xs-offset-8 text-right">
-            {!! Form::label('s', 'Pesquisar por nome') !!}
-            <div class="input-append input-group" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-                {!! Form::text('s', null, ['class'=>'form-control']) !!}
-                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-            </div>
-
+            {!! HForm::search() !!}
         </div>
 
 
@@ -33,7 +26,8 @@
                 <tr>
                     <th>Nome</th>
                     <th>Tempo</th>
-                    <th>Descrição</th>
+                    <th>Porte</th>
+                    <th>Preço</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -43,10 +37,11 @@
                 <tr>
                     <td>{{ $service }}</td>
                     <td>15 minutos</td>
-                    <td>Lorem ipsum deler</td>
+                    <td>Grande</td>
+                    <td>R$ 10,20</td>
                     <td>
-                        <a href="{{ URL::to('/') }}associado/servicos/add" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
-                        <a href="{{ URL::to('/') }}associado/servicos/add" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Fechar"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                        <a href="{{ URL::to('/') }}associado/servicos/add" class="btn btn-primary" data-toggle="modal" data-target="#add_service" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
+                        <a href="{{ URL::to('/') }}associado/servicos/add" class="btn btn-danger" data-toggle="modal" data-target="#delete_service" title="Fechar"><i class="glyphicon glyphicon-remove-circle"></i></a>
                     </td>
                 </tr>
             @endforeach
@@ -57,5 +52,6 @@
 @endsection
 
 @section('footer')
-    @include('modules/modal/add_services')
+    @include('associate/modules/modal/add_services')
+    @include('associate/modules/modal/delete_services')
 @endsection

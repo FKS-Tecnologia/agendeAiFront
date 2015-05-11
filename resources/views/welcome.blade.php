@@ -7,10 +7,5 @@
                 Acesso ao lojista
             </a>
         </li>
-        <li>
-            <a href="{{ url('/auth/register') }}">
-                Novo cadastro
-            </a>
-        </li>
     </ul>
 @endsection

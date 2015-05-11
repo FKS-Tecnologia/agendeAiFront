@@ -10,12 +10,8 @@
         <h1>{{ $title }}</h1>
     </div>
 
-    <div class="col-xs-4 text-right">
-        {!! Form::label('open', 'Aberto?:') !!}
-        {!! Form::checkbox('open', 1, 1, ['class'=>'switch']) !!}
-    </div>
 
-    <div class="col-xs-3 text-right">
+    <div class="col-xs-3 col-xs-offset-4 text-right">
         {!! Html::link('#add', 'Editar estabelecimento', ['class'=>'btn btn-primary', 'data-toggle' => "modal", 'data-target'=>"#add_user"]) !!}
     </div>
 
@@ -54,5 +50,5 @@
 @endsection
 
 @section('footer')
-    @include('modules/modal/edit_bussiness')
+    @include('associate/modules/modal/edit_bussiness')
 @endsection

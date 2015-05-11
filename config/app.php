@@ -197,6 +197,7 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
         'Html'      => 'Illuminate\Html\HtmlFacade',
         'Form'      => 'Illuminate\Html\FormFacade',
+        'HForm'      => 'App\Library\Forms',
 
 	],
 

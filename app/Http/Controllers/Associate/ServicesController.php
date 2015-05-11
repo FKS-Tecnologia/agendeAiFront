@@ -14,12 +14,14 @@ class ServicesController extends Controller {
 	 */
 	public function index()
 	{
-        $services=['Banho', 'Tosa - Pequeno', 'Tosa - Grande'];
+        $services=['Banho', 'Tosa', 'Corte'];
+        $sizes=['Pequeno', 'Medio', 'Grande'];
 
 
         return view('associate/services_index')
             ->with('title', 'Serviços')
             ->with('breads', ['Serviços' => 'associado/servicos'])
+            ->with('sizes', $sizes)
             ->with('services', $services);
 	}
 

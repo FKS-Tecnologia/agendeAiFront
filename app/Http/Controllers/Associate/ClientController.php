@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class EmploymentController extends Controller {
+class ClientController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -15,12 +15,14 @@ class EmploymentController extends Controller {
 	public function index()
 	{
 
-        $services=['Banho', 'Tosa - Pequeno', 'Tosa - Grande'];
+        $services=['Banho', 'Tosa', 'Corte'];
+        $size=['Pequeno', 'Médio', 'Grande'];
 
 
-		return view('associate/employment_index')
-            ->with('title', 'Funcionários')
-            ->with('breads', ['Funcionários' => 'associado/funcionarios'])
+		return view('associate/client_index')
+            ->with('title', 'Clientes')
+            ->with('breads', ['Clientes' => 'associado/clientes'])
+            ->with('size', $size)
             ->with('services', $services);
 	}
 

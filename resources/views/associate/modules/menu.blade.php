@@ -10,7 +10,7 @@
             <div class="pull-right">
                 <ul class="nav nav-tabs navbar-right mt-menu-admin">
                     <li><a href="{{ url('/associado/info') }}">Informações</a></li>
-                    <li><a href="{{ url('/associado/funcionarios') }}">Funcionários</a></li>
+                    <li><a href="{{ url('/associado/clientes') }}">Clientes</a></li>
                     <li><a href="{{ url('/associado/servicos') }}">Serviços</a></li>
                     <li><a href="{{ url('/associado/calendario') }}">Calendário</a></li>
                     <li><a href="{{ url('/associado/usuarios') }}">Usuário</a></li>

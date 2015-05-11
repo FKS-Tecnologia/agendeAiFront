@@ -14,31 +14,24 @@
         {!! Html::link('#add', 'Adicionar tarefa', ['class'=>'btn btn-primary', 'data-toggle' => "modal", 'data-target'=>"#add_job"]) !!}
     </div>
 
+    <div class="clearfix"></div>
 
-    <div class="row pull-left">
-        <div class="col-xs-2 col-xs-offset-4 text-right">
-            {!! Form::label('jobs', 'Por tarefa') !!}
-            {!! Form::select('jobs', $services, null, ['class'=>'form-control']) !!}
+    <div class="mt2">
+        <div class="col-xs-2">
+            {!! HForm::time('step', 'Visualizar a cada', '00:15', false) !!}
         </div>
 
-        <div class="col-xs-6 text-right">
-            {!! Form::open(); !!}
-                <div class="col-xs-6">
-                    {!! Form::label('date_init', 'De: ') !!}
-                    <div class="input-append input-group date" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-                        {!! Form::text('date_init', null, ['class'=>'form-control']); !!}
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                    </div>
-                </div>
-                <div class="col-xs-6">
-                    {!! Form::label('date_end', 'até ') !!}
-                    <div class="input-append input-group date" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-                        {!! Form::text('date_end', null, ['class'=>'form-control date']); !!}
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                    </div>
+        <div class="col-xs-4 col-xs-offset-3">
+            {!! Form::label('calendar_view', 'Visualizar por ', ['class'=>'col-xs-10 col-xs-offset-2']) !!}
+            <div class="text-right">
+                {!! Html::link('associado/calendario/?view=day', 'Diário', ['class'=>"btn btn-primary ".(Input::get("view", "day")=="day"?"active":"")]) !!}
+                {!! Html::link('associado/calendario/?view=week', 'Semanal', ['class'=>"btn btn-primary ".(Input::get("view")=="week"?"active":"")]) !!}
+                {!! Html::link('associado/calendario/?view=month', 'Mensal', ['class'=>"btn btn-primary ".(Input::get("view")=="month"?"active":"")]) !!}
+            </div>
+        </div>
 
-                </div>
-            {!! Form::close(); !!}
+        <div class="col-xs-3 ">
+            {!! HForm::search() !!}
         </div>
     </div>
 
@@ -50,5 +43,5 @@
 @endsection
 
 @section('footer')
-    @include('modules/modal/add_job')
+    @include('associate/modules/modal/add_job')
 @endsection

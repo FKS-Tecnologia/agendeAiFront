@@ -16,7 +16,7 @@ Route::get('/', 'WelcomeController@index');
 Route::group(['prefix' => 'associado'], function()
 {
     Route::resource('info', 'Associate\InfoController');
-    Route::resource('funcionarios', 'Associate\EmploymentController');
+    Route::resource('clientes', 'Associate\ClientController');
     Route::resource('servicos', 'Associate\ServicesController');
     Route::controller('usuarios', 'Associate\UserController');
     Route::controller('/', 'Associate\AssociateController');

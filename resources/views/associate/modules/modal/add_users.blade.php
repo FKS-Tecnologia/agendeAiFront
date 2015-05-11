@@ -6,10 +6,8 @@
                 <h3>Cadastrar novo usuário</h3>
             </div>
             <div class="modal-body row">
-                @include('auth/form/register')
+                @include('auth.form.register')
             </div>
-
-
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
